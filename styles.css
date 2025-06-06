@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #0a0a0a;
+    overflow: hidden;
+}
+
+a-scene {
+    height: 100vh;
+    width: 100vw;
+}
+
+#ui-overlay {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    max-width: 300px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ff6b35;
+    backdrop-filter: blur(10px);
+    font-family: 'Arial', sans-serif;
+}
+
+#ui-overlay h2 {
+    color: #ff6b35;
+    margin-top: 0;
+    font-size: 1.5em;
+    text-align: center;
+    text-shadow: 0 0 10px #ff6b35;
+}
+
+#ui-overlay h3 {
+    color: #00ffff;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#ui-overlay p {
+    line-height: 1.4;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+#instructions {
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.clickable:hover {
+    cursor: pointer;
+}
+
+.chapter-clickable:hover {
+    cursor: pointer;
+}
+
+/* Loading screen customization */
+.a-enter-vr-button {
+    background: linear-gradient(45deg, #ff6b35, #00ffff);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+/* VR UI Styles */
+@media (max-width: 768px) {
+    #ui-overlay {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        max-width: none;
+        padding: 15px;
+    }
+    
+    #ui-overlay h2 {
+        font-size: 1.2em;
+    }
+    
+    #ui-overlay p {
+        font-size: 0.8em;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    #instructions {
+        animation: none;
+    }
+}
+
+/* Cursor effects */
+a-cursor {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
