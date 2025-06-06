@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>My Hyper Island Journey - WebXR Experience</title>
+    <title>My Hyper Island Evolution - WebXR Experience</title>
     <meta
       name="description"
       content="An immersive WebXR journey through Hyper Island education"
@@ -27,7 +27,7 @@
       <a-assets>
         <!-- Sounds -->
         <audio id="ambient-sound" src="" preload="auto" loop></audio>
-        <audio id="door-sound" src="" preload="auto"></audio>
+        <audio id="door-sound" src="assets/Door-open.mp3" preload="auto"></audio>
         <audio id="transition-sound" src="" preload="auto"></audio>
 
         <!-- 3D Models -->
@@ -112,18 +112,17 @@
         >
         </a-entity>
 
-        <!-- Fading wall text (dreams) -->
-         <!-- Smaller and Faded Code Below "HTML" -->
-<a-text
-position="-2 4 -7"
-rotation="0 0 0"
-value="<h1>Hello World</h1>\n\n<p>This is Hyper Island</p>\n\n<p>Dreams don't retire!</p>"
-color="#FFFFFF"
-font="https://cdn.aframe.io/fonts/mozillavr.fnt"
-width="10" 
-opacity="0.4"
-align="center"
-></a-text>
+        <!-- Smaller and Faded Code Below "HTML" -->
+        <a-text
+          position="-2 4 -7"
+          rotation="0 0 0"
+          value="<h1>Hello World</h1>\n\n<p>This is Hyper Island</p>\n\n<p>Dreams don't retire!</p>"
+          color="#FFFFFF"
+          font="https://cdn.aframe.io/fonts/mozillavr.fnt"
+          width="10"
+          opacity="0.4"
+          align="center"
+        ></a-text>
         <a-text
           id="html-text"
           position="-3 6 -7"
@@ -175,36 +174,35 @@ align="center"
         ></a-text>
 
         <a-text
-  id="js-text"
-  position="5 4 0"
-  rotation="0 -90 0"
-  value="JavaScript"
-  color="#FFFFFF"
-  font="https://cdn.aframe.io/fonts/mozillavr.fnt"
-  width="10"
-  opacity="0.5"
->
-  <a-animation
-    attribute="opacity"
-    to="0.5"
-    dur="3500"
-    direction="alternate"
-    repeat="indefinite"
-  ></a-animation>
-</a-text>
+          id="js-text"
+          position="5 4 0"
+          rotation="0 -90 0"
+          value="JavaScript"
+          color="#FFFFFF"
+          font="https://cdn.aframe.io/fonts/mozillavr.fnt"
+          width="10"
+          opacity="0.5"
+        >
+          <a-animation
+            attribute="opacity"
+            to="0.5"
+            dur="3500"
+            direction="alternate"
+            repeat="indefinite"
+          ></a-animation>
+        </a-text>
 
-<!-- Smaller and Faded Code Below "JavaScript" -->
-<a-text
-  position="5 2.5 0"
-  rotation="0 -90 0"
-  value="JavaScript Keywords:\n\nfunction\nlet\n\nconst\n\nreturn\n\nconsole.log"
-  color="#FFFFFF"
-  font="https://cdn.aframe.io/fonts/mozillavr.fnt"
-  width="4"
-  opacity="0.4"
-  align="left"
-></a-text>
-
+        <!-- Smaller and Faded Code Below "JavaScript" -->
+        <a-text
+          position="5 2.5 0"
+          rotation="0 -90 0"
+          value="JavaScript Keywords:\n\nfunction\nlet\n\nconst\n\nreturn\n\nconsole.log"
+          color="#FFFFFF"
+          font="https://cdn.aframe.io/fonts/mozillavr.fnt"
+          width="4"
+          opacity="0.4"
+          align="left"
+        ></a-text>
 
         <!-- Inspirational quote -->
 
@@ -309,7 +307,6 @@ align="center"
             intensity="2"
             distance="10"
           ></a-light>
-          <!-- <a-light type="directional" color="#ffffff" intensity="0.6" position="0 4 2" target="#dreamy-girl"></a-light> -->
         </a-entity>
       </a-entity>
 

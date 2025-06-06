@@ -67,23 +67,25 @@ function initializeExperience() {
 
 function setupDoorInteraction() {
     const door = document.querySelector('#door-clickable');
-    
+
     if (door) {
-        door.addEventListener('click', function() {
-            console.log('🚪 Door clicked! Transitioning to chapter selection...');
+        door.addEventListener('click', function () {
+            console.log('🚪 Door clicked! Playing door sound...');
+            playSound('#door-sound');  // Play door sound here
             transitionToChapterScene();
         });
-        
+
         // Add hover effect
-        door.addEventListener('mouseenter', function() {
+        door.addEventListener('mouseenter', function () {
             door.setAttribute('animation__hover', 'property: scale; to: 1.1 1.1 1.1; dur: 200');
         });
-        
-        door.addEventListener('mouseleave', function() {
+
+        door.addEventListener('mouseleave', function () {
             door.setAttribute('animation__hover', 'property: scale; to: 1 1 1; dur: 200');
         });
     }
 }
+
 
 function setupChapterInteractions() {
     const chapterElements = document.querySelectorAll('.chapter-clickable');
