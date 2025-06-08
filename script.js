@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
          if (centralPlane) {
              centralPlane.setAttribute('visible', 'true');
          }
+         
      });
  });
  
@@ -64,31 +65,43 @@ let isTransitioning = false;
 const chapterData = {
     1: {
         title: "Foundations Station",
-        description: "Learning HTML, CSS, JavaScript fundamentals with modular, interactive practice and creative exploration."
+        description: "Learning HTML, CSS, JavaScript fundamentals with modular, interactive practice and creative exploration.",
+        keyword: "Creative Exploration"
     },
     2: {
         title: "Collab Central", 
-        description: "Embracing radical collaboration, trusting the process, and learning that feedback is a gift."
+        description: "Embracing radical collaboration, trusting the process, and learning that feedback is a gift.",
+        keyword: "Feedback"
     },
     3: {
-        title: "Design Detour",
-        description: "Exploring UI/UX design, empathy, aesthetics, and user flows with vibrant creativity."
+        title: "React Rendezvous",
+        description: "Diving into React.js, building dynamic UIs, and mastering component-based architecture with a focus on reusability.",
+        keyword: "Reusability"
     },
     4: {
-        title: "Backend Boiler Room",
-        description: "Structuring logic and powering data flow with Node.js, databases, and REST APIs."
+        title: "Design Detour",
+        description: "Exploring UI/UX design, empathy, aesthetics, and user flows with vibrant creativity.",
+        keyword: "Empathy"
     },
     5: {
-        title: "Project Junction",
-        description: "Building, breaking, learning, and repeating in a dynamic maker space environment."
+        title: "Backend Boiler Room",
+        description: "Structuring logic and powering data flow with Node.js, databases, and REST APIs.",
+        keyword: "Logic"
     },
     6: {
-        title: "Reflect Loop",
-        description: "Introspective learning: What did I learn? How did I grow? What's next?"
+        title: "Project Junction",
+        description: "Building, breaking, learning, and repeating in a dynamic maker space environment.",
+        keyword: "Iteration"
+    },
+    7: {
+        title: "Web XR Wonderland",
+        description: "Exploring WebXR, creating immersive experiences, and pushing the boundaries of web technology.",
+        keyword: "Immersion"
     },
     final: {
         title: "Launch Station",
-        description: "Portfolio ready, future bright. Ready to lead, ready to change the world."
+        description: "Portfolio ready, future bright. Ready to lead, ready to change the world.",
+        keyword: "Leadership"
     }
 };
 
@@ -181,7 +194,7 @@ function transitionToChapterScene() {
     playSound('#transition-sound');
     
     // Update UI
-    updateUI('click the sphere below the chapter to explore my learning journey!');
+    updateUI('Click the sphere below the chapter to explore my learning journey!');
     
     // Fade out initial scene
     const initialScene = document.querySelector('#initial-scene');
