@@ -87,6 +87,7 @@ function setupDoorInteraction() {
 }
 
 
+
 function setupChapterInteractions() {
     const chapterElements = document.querySelectorAll('.chapter-clickable');
     
@@ -95,6 +96,56 @@ function setupChapterInteractions() {
             const chapterNum = this.getAttribute('data-chapter');
             console.log(`📚 Chapter ${chapterNum} clicked!`);
             showChapterInfo(chapterNum);
+
+            // Open website for Chapter 1
+            if (chapterNum === '1') {
+                const previewPlane1 = document.querySelector('#chapter-1-preview');
+                if (previewPlane1) {
+                  previewPlane1.setAttribute('visible', true);
+                }
+              }
+              // Open website for Chapter 2
+            if (chapterNum === '2') {
+                const previewPlane2 = document.querySelector('#chapter-2-preview');
+                if (previewPlane2) {
+                  previewPlane2.setAttribute('visible', true);
+                }
+              }
+              // Open website for Chapter 3
+            if (chapterNum === '3') {
+                const previewPlane3 = document.querySelector('#chapter-3-preview');
+                if (previewPlane3) {
+                  previewPlane3.setAttribute('visible', true);
+                }
+              }
+              // Open website for Chapter 4
+            if (chapterNum === '4') {
+                const previewPlane4 = document.querySelector('#chapter-4-preview');
+                if (previewPlane4) {
+                  previewPlane4.setAttribute('visible', true);
+                }
+              }
+            // Open website for Chapter 5
+            if (chapterNum === '5') {
+                const previewPlane5 = document.querySelector('#chapter-5-preview');
+                if (previewPlane5) {
+                  previewPlane5.setAttribute('visible', true);
+                }
+              }
+                // Open website for Chapter 6
+            if (chapterNum === '6') {
+                const previewPlane6 = document.querySelector('#chapter-6-preview');
+                if (previewPlane6) {
+                  previewPlane6.setAttribute('visible', true);
+                }
+              }
+              // Open website for Chapter 7
+            if (chapterNum === '7') {
+                const previewPlane7 = document.querySelector('#chapter-7-preview');
+                if (previewPlane7) {
+                  previewPlane7.setAttribute('visible', true);
+                }
+              }
         });
         
         // Add hover effects
@@ -107,6 +158,55 @@ function setupChapterInteractions() {
             this.removeAttribute('animation__hover');
             this.setAttribute('animation__scale', 'property: scale; to: 1 1 1; dur: 200');
         });
+    });
+}
+
+const previewPlane1 = document.querySelector('#chapter-1-preview');
+if (previewPlane1) {
+  previewPlane1.addEventListener('click', () => {
+    window.open('https://bucolic-crisp-8c9366.netlify.app/', '_blank');
+  });
+}
+
+const previewPlane2 = document.querySelector('#chapter-2-preview');
+if (previewPlane2) {
+    previewPlane2.addEventListener('click', () => {
+    window.open('https://bucolic-crisp-8c9366.netlify.app/', '_blank');
+    });
+}
+
+const previewPlane3 = document.querySelector('#chapter-3-preview');
+if (previewPlane3) {
+    previewPlane3.addEventListener('click', () => {
+    window.open('https://bucolic-crisp-8c9366.netlify.app/', '_blank');
+    });
+}
+
+const previewPlane4 = document.querySelector('#chapter-4-preview');
+if (previewPlane4) {
+    previewPlane4.addEventListener('click', () => {
+    window.open('https://bucolic-crisp-8c9366.netlify.app/', '_blank');
+    });
+}
+
+const previewPlane5 = document.querySelector('#chapter-5-preview');
+if (previewPlane5) {
+    previewPlane5.addEventListener('click', () => {
+    window.open('https://bucolic-crisp-8c9366.netlify.app/', '_blank');
+    });
+}
+
+const previewPlane6 = document.querySelector('#chapter-6-preview');
+if (previewPlane6) {
+    previewPlane6.addEventListener('click', () => {
+    window.open('https://bucolic-crisp-8c9366.netlify.app/', '_blank');
+    });
+}
+
+const previewPlane7 = document.querySelector('#chapter-7-preview');
+if (previewPlane7) {
+    previewPlane7.addEventListener('click', () => {
+    window.open('https://bucolic-crisp-8c9366.netlify.app/', '_blank');
     });
 }
 

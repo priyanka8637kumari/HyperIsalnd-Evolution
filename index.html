@@ -27,7 +27,11 @@
       <a-assets>
         <!-- Sounds -->
         <audio id="ambient-sound" src="" preload="auto" loop></audio>
-        <audio id="door-sound" src="assets/Door-open.mp3" preload="auto"></audio>
+        <audio
+          id="door-sound"
+          src="assets/Door-open.mp3"
+          preload="auto"
+        ></audio>
         <audio id="transition-sound" src="" preload="auto"></audio>
 
         <!-- 3D Models -->
@@ -36,6 +40,8 @@
           src="assets/dreamy-girl.glb"
         ></a-asset-item>
 
+        <a-asset-item id="island-model" src="assets/Island.glb"></a-asset-item>
+
         <!-- Textures -->
         <img
           id="wood-texture"
@@ -43,6 +49,8 @@
         />
         <img id="wall-texture" src="assets/gray-wall.png" />
         <img id="hi-env" src="assets/hi-env.png" />
+        <img id="portfolio-img" src="assets/portfolio.png" />
+        <img id="tictac-img" src="assets/TicTac.png" />
 
         <!-- Mixins -->
         <a-mixin
@@ -326,173 +334,279 @@
           ></a-cylinder>
 
           <!-- Chapter islands arranged in a circle -->
+          <!-- chapter 1 -->
           <a-entity id="chapter-1-island" position="10 0 0">
             <a-cylinder
               radius="3"
               height="1"
-              material="color: #32CD32"
+              material="color: #7DA50D"
             ></a-cylinder>
             <a-text
-              position="0 2 0"
+              position="0 3.75 0"
               value="Chapter 1\nFoundations"
               align="center"
-              color="#ffffff"
-              width="6"
+              color="#ff6b35"
+              width="18"
             ></a-text>
-            <a-box
-              position="0 1 0"
-              width="1"
-              height="2"
-              depth="1"
-              material="color: #ff6b35"
+            <a-sphere
+              position="0 2 0"
+              radius="1"
+              material="color: #FFFFFF; opacity: 0.8"
               class="chapter-clickable"
               data-chapter="1"
-            ></a-box>
+            ></a-sphere>
           </a-entity>
+          <a-plane
+            id="chapter-1-preview"
+            class="chapter-preview"
+            src="#tictac-img"
+            width="3.5"
+            height="2"
+            position="10 6 0"
+            visible="false"
+            material="shader: flat; opacity: 1"
+            class="clickable"
+          ></a-plane>
 
+          <!-- chapter 2 -->
           <a-entity id="chapter-2-island" position="7 0 7">
             <a-cylinder
               radius="3"
               height="1"
-              material="color: #32CD32"
+              material="color: #7DA50D"
             ></a-cylinder>
             <a-text
-              position="0 2 0"
+              position="0 3.75 0"
               value="Chapter 2\nCollaboration"
               align="center"
-              color="#ffffff"
-              width="6"
+              color="#ff6b35"
+              width="16"
             ></a-text>
-            <a-box
-              position="0 1 0"
-              width="1"
-              height="2"
-              depth="1"
-              material="color: #ff6b35"
+            <a-sphere
+              position="0 2 0"
+              radius="1"
+              material="color: #FFFFFF; opacity: 0.8"
               class="chapter-clickable"
               data-chapter="2"
-            ></a-box>
+            ></a-sphere>
           </a-entity>
+          <a-plane
+          id="chapter-2-preview"
+          class="chapter-preview"
+          src="#tictac-img"
+          width="3.5"
+          height="2"
+          position="14 6 7"
+          visible="false"
+          material="shader: flat; opacity: 1"
+          class="clickable"
+        ></a-plane>
 
+        
+          <!-- chapter 3 -->
           <a-entity id="chapter-3-island" position="0 0 10">
             <a-cylinder
               radius="3"
               height="1"
-              material="color: #32CD32"
+              material="color: #7DA50D"
             ></a-cylinder>
             <a-text
-              position="0 2 0"
-              value="Chapter 3\nDesign"
+              position="0 3.75 0"
+              value="Chapter 3\nReact"
               align="center"
-              color="#ffffff"
-              width="6"
+              color="#ff6b35"
+              width="16"
             ></a-text>
-            <a-box
-              position="0 1 0"
-              width="1"
-              height="2"
-              depth="1"
-              material="color: #ff6b35"
+            <a-sphere
+              position="0 2 0"
+              radius="1"
+              material="color: #FFFFFF; opacity: 0.8"
               class="chapter-clickable"
               data-chapter="3"
-            ></a-box>
+            ></a-sphere>
           </a-entity>
+          <a-plane
+          id="chapter-3-preview"
+          class="chapter-preview"
+          src="#tictac-img"
+          width="3.5"
+          height="2"
+          position="0 6 14"
+          visible="false"
+          material="shader: flat; opacity: 1"
+          class="clickable"
+        ></a-plane>
 
+          <!-- chapter 4 -->
           <a-entity id="chapter-4-island" position="-7 0 7">
             <a-cylinder
               radius="3"
               height="1"
-              material="color: #32CD32"
+              material="color: #7DA50D"
             ></a-cylinder>
             <a-text
-              position="0 2 0"
-              value="Chapter 4\nBackend"
+              position="0 3.75 0"
+              value="Chapter 4\nUX/UI Design"
               align="center"
-              color="#ffffff"
-              width="6"
+              color="#ff6b35"
+              width="16"
             ></a-text>
-            <a-box
-              position="0 1 0"
-              width="1"
-              height="2"
-              depth="1"
-              material="color: #ff6b35"
+            <a-sphere
+              position="0 2 0"
+              radius="1"
+              material="color: #FFFFFF; opacity: 0.8"
               class="chapter-clickable"
               data-chapter="4"
-            ></a-box>
+            ></a-sphere>
           </a-entity>
 
+          <a-plane
+          id="chapter-4-preview"
+          class="chapter-preview"
+          src="#tictac-img"
+          width="3.5"
+          height="2"
+          position="-14 6 7"
+          visible="false"
+          material="shader: flat; opacity: 1"
+          class="clickable"
+        ></a-plane>
+
+          <!-- chapter 5 -->
           <a-entity id="chapter-5-island" position="-10 0 0">
             <a-cylinder
               radius="3"
               height="1"
-              material="color: #32CD32"
+              material="color: #7DA50D"
             ></a-cylinder>
             <a-text
-              position="0 2 0"
-              value="Chapter 5\nProjects"
+              position="0 3.75 0"
+              value="Chapter 5\nBackend Development"
               align="center"
-              color="#ffffff"
-              width="6"
+              color="#ff6b35"
+              width="16"
             ></a-text>
-            <a-box
-              position="0 1 0"
-              width="1"
-              height="2"
-              depth="1"
-              material="color: #ff6b35"
+            <a-sphere
+              position="0 2 0"
+              radius="1"
+              material="color: #FFFFFF; opacity: 0.8"
               class="chapter-clickable"
               data-chapter="5"
-            ></a-box>
+            ></a-sphere>
           </a-entity>
+          <a-plane
+          id="chapter-5-preview"
+          class="chapter-preview"
+          src="#tictac-img"
+          width="3.5"
+          height="2"
+          position="-10 6 -4"
+          visible="false"
+          material="shader: flat; opacity: 1"
+          class="clickable"
+        ></a-plane>
 
+          <!-- chapter 6 -->
           <a-entity id="chapter-6-island" position="-7 0 -7">
             <a-cylinder
               radius="3"
               height="1"
-              material="color: #32CD32"
+              material="color: #7DA50D"
             ></a-cylinder>
             <a-text
-              position="0 2 0"
-              value="Chapter 6\nReflection"
+              position="0 3.75 0"
+              value="Chapter 6\nClient Project"
               align="center"
-              color="#ffffff"
-              width="6"
+              color="#ff6b35"
+              width="16"
             ></a-text>
-            <a-box
-              position="0 1 0"
-              width="1"
-              height="2"
-              depth="1"
-              material="color: #ff6b35"
+            <a-sphere
+              position="0 2 0"
+              radius="1"
+              material="color: #FFFFFF; opacity: 0.8"
               class="chapter-clickable"
               data-chapter="6"
-            ></a-box>
+            ></a-sphere>
           </a-entity>
+          <a-plane
+          id="chapter-6-preview"
+          class="chapter-preview"
+          src="#tictac-img"
+          width="3.5"
+          height="2"
+          position="-14 6 -7"
+          visible="false"
+          material="shader: flat; opacity: 1"
+          class="clickable"
+        ></a-plane>
 
-          <a-entity id="final-chapter-island" position="0 0 -10">
+             <!-- chapter 7-->
+             <a-entity id="chapter-7-island" position="0 0 -10">
+              <a-cylinder
+                radius="3"
+                height="1"
+                material="color: #7DA50D"
+              ></a-cylinder>
+              <a-text
+                position="0 3.75 0"
+                value="Chapter 7\nWeb XR"
+                align="center"
+                color="#ff6b35"
+                width="16"
+              ></a-text>
+              <a-sphere
+                position="0 2 0"
+                radius="1"
+                material="color: #FFFFFF; opacity: 0.8"
+                class="chapter-clickable"
+                data-chapter="7"
+              ></a-sphere>
+            </a-entity>
+            <a-plane
+            id="chapter-7-preview"
+            class="chapter-preview"
+            src="#tictac-img"
+            width="3.5"
+            height="2"
+            position="6 6 -12"
+            visible="false"
+            material="shader: flat; opacity: 1"
+            class="clickable"
+          ></a-plane>
+
+          <!-- Final chapter -->
+          <a-entity id="final-chapter-island" position="7 0 -8">
             <a-cylinder
               radius="3"
               height="1"
-              material="color: #FFD700"
+              material="color: #7DA50D"
             ></a-cylinder>
             <a-text
-              position="0 2 0"
+              position="0 3.75 0"
               value="Final Chapter\nLaunch"
               align="center"
-              color="#ffffff"
-              width="6"
+              color="#ff6b35"
+              width="16"
             ></a-text>
-            <a-box
-              position="0 1 0"
-              width="1"
-              height="2"
-              depth="1"
-              material="color: #FFD700"
+            <a-sphere
+              position="0 2 0"
+              radius="1"
+              material="color: #FFFFFF; opacity: 0.8"
               class="chapter-clickable"
               data-chapter="final"
-            ></a-box>
+            ></a-sphere>
           </a-entity>
+          <a-plane
+            id="final-chapter-preview" 
+            class="chapter-preview"
+            src="#portfolio-img"
+            width="3.5"
+            height="2"
+            position="0 6 -10"
+            visible="false"
+            material="shader: flat; opacity: 1"
+            class="clickable"
+        </a-entity>
         </a-entity>
 
         <!-- Clouds -->
