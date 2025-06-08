@@ -1,6 +1,61 @@
 // WebXR Hyper Island Journey - Main Script
 console.log('🚀 Hyper Island Journey WebXR Experience Starting...');
 
+document.addEventListener('DOMContentLoaded', () => {
+    const ambientSound = document.querySelector('#ambient-sound');
+    const hyperIslandDoor = document.querySelector('#hyper-door');
+
+    // Ensure ambient sound starts when the scene loads
+    const scene = document.querySelector('a-scene');
+    scene.addEventListener('loaded', () => {
+        console.log('🎶 Initial Scene - The Dreamer\'s Room loaded, playing ambient sound...');
+        playAmbientSound(ambientSound);
+    });
+
+    // Stop ambient sound when the Hyper Island Door is clicked
+    hyperIslandDoor.addEventListener('click', () => {
+        console.log('🚪 Hyper Island Door clicked, stopping ambient sound...');
+        stopAmbientSound(ambientSound);
+    });
+
+
+ // Chapter sphere interactions
+ const chapterSpheres = document.querySelectorAll('.chapter-clickable');
+
+ chapterSpheres.forEach(sphere => {
+     sphere.addEventListener('click', () => {
+         const chapterNum = sphere.getAttribute('data-chapter');
+         console.log(`📚 Chapter ${chapterNum} sphere clicked!`);
+
+         // Hide all planes above the Central Island
+         const centralPlanes = document.querySelectorAll('[id^="chapter-"][id$="-central-plane"]');
+         centralPlanes.forEach(plane => plane.setAttribute('visible', 'false'));
+
+         // Show the plane for the clicked chapter
+         const centralPlane = document.querySelector(`#chapter-${chapterNum}-central-plane`);
+         if (centralPlane) {
+             centralPlane.setAttribute('visible', 'true');
+         }
+     });
+ });
+ 
+});
+
+// Function to play ambient sound
+function playAmbientSound(audioElement) {
+    if (audioElement) {
+        audioElement.play().catch(e => console.log('Audio play prevented:', e));
+    }
+}
+
+// Function to stop ambient sound
+function stopAmbientSound(audioElement) {
+    if (audioElement) {
+        audioElement.pause();
+        audioElement.currentTime = 0; // Reset sound to the beginning
+    }
+}
+
 // Scene management
 let currentScene = 'initial';
 let isTransitioning = false;
@@ -54,7 +109,7 @@ function initializeExperience() {
     console.log('🎮 A-Frame scene loaded, setting up interactions...');
     
     setupDoorInteraction();
-    setupChapterInteractions();
+    //setupChapterInteractions();
     setupAnimations();
     setupAudio();
     
@@ -89,6 +144,8 @@ function setupDoorInteraction() {
 
 
 function setupChapterInteractions() {
+    if(currentScene !== 'chapters' || isTransitioning) return;
+    
     const chapterElements = document.querySelectorAll('.chapter-clickable');
     
     chapterElements.forEach(element => {
@@ -97,55 +154,7 @@ function setupChapterInteractions() {
             console.log(`📚 Chapter ${chapterNum} clicked!`);
             showChapterInfo(chapterNum);
 
-            // Open website for Chapter 1
-            if (chapterNum === '1') {
-                const previewPlane1 = document.querySelector('#chapter-1-preview');
-                if (previewPlane1) {
-                  previewPlane1.setAttribute('visible', true);
-                }
-              }
-              // Open website for Chapter 2
-            if (chapterNum === '2') {
-                const previewPlane2 = document.querySelector('#chapter-2-preview');
-                if (previewPlane2) {
-                  previewPlane2.setAttribute('visible', true);
-                }
-              }
-              // Open website for Chapter 3
-            if (chapterNum === '3') {
-                const previewPlane3 = document.querySelector('#chapter-3-preview');
-                if (previewPlane3) {
-                  previewPlane3.setAttribute('visible', true);
-                }
-              }
-              // Open website for Chapter 4
-            if (chapterNum === '4') {
-                const previewPlane4 = document.querySelector('#chapter-4-preview');
-                if (previewPlane4) {
-                  previewPlane4.setAttribute('visible', true);
-                }
-              }
-            // Open website for Chapter 5
-            if (chapterNum === '5') {
-                const previewPlane5 = document.querySelector('#chapter-5-preview');
-                if (previewPlane5) {
-                  previewPlane5.setAttribute('visible', true);
-                }
-              }
-                // Open website for Chapter 6
-            if (chapterNum === '6') {
-                const previewPlane6 = document.querySelector('#chapter-6-preview');
-                if (previewPlane6) {
-                  previewPlane6.setAttribute('visible', true);
-                }
-              }
-              // Open website for Chapter 7
-            if (chapterNum === '7') {
-                const previewPlane7 = document.querySelector('#chapter-7-preview');
-                if (previewPlane7) {
-                  previewPlane7.setAttribute('visible', true);
-                }
-              }
+            
         });
         
         // Add hover effects
@@ -161,54 +170,6 @@ function setupChapterInteractions() {
     });
 }
 
-const previewPlane1 = document.querySelector('#chapter-1-preview');
-if (previewPlane1) {
-  previewPlane1.addEventListener('click', () => {
-    window.open('https://bucolic-crisp-8c9366.netlify.app/', '_blank');
-  });
-}
-
-const previewPlane2 = document.querySelector('#chapter-2-preview');
-if (previewPlane2) {
-    previewPlane2.addEventListener('click', () => {
-    window.open('https://bucolic-crisp-8c9366.netlify.app/', '_blank');
-    });
-}
-
-const previewPlane3 = document.querySelector('#chapter-3-preview');
-if (previewPlane3) {
-    previewPlane3.addEventListener('click', () => {
-    window.open('https://bucolic-crisp-8c9366.netlify.app/', '_blank');
-    });
-}
-
-const previewPlane4 = document.querySelector('#chapter-4-preview');
-if (previewPlane4) {
-    previewPlane4.addEventListener('click', () => {
-    window.open('https://bucolic-crisp-8c9366.netlify.app/', '_blank');
-    });
-}
-
-const previewPlane5 = document.querySelector('#chapter-5-preview');
-if (previewPlane5) {
-    previewPlane5.addEventListener('click', () => {
-    window.open('https://bucolic-crisp-8c9366.netlify.app/', '_blank');
-    });
-}
-
-const previewPlane6 = document.querySelector('#chapter-6-preview');
-if (previewPlane6) {
-    previewPlane6.addEventListener('click', () => {
-    window.open('https://bucolic-crisp-8c9366.netlify.app/', '_blank');
-    });
-}
-
-const previewPlane7 = document.querySelector('#chapter-7-preview');
-if (previewPlane7) {
-    previewPlane7.addEventListener('click', () => {
-    window.open('https://bucolic-crisp-8c9366.netlify.app/', '_blank');
-    });
-}
 
 function transitionToChapterScene() {
     if (isTransitioning) return;
@@ -220,7 +181,7 @@ function transitionToChapterScene() {
     playSound('#transition-sound');
     
     // Update UI
-    updateUI('Select a chapter to explore your learning journey!');
+    updateUI('click the sphere below the chapter to explore my learning journey!');
     
     // Fade out initial scene
     const initialScene = document.querySelector('#initial-scene');
@@ -241,6 +202,9 @@ function transitionToChapterScene() {
         
         currentScene = 'chapters';
         isTransitioning = false;
+
+        // Initialize chapter interactions after transition
+        setupChapterInteractions();
         
         console.log('✨ Transition complete!');
     }, 1500);
