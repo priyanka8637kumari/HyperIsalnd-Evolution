@@ -340,7 +340,7 @@
 
         <!-- Floating islands environment -->
         <a-entity id="floating-islands">
-          <!-- Plane for Chapter 1 Image Above Central Island -->
+          <!-- Plane for Chapter's Image Above Central Island -->
           <a-plane
             id="chapter-1-central-plane"
             position="0 1 0"
@@ -350,6 +350,16 @@
             visible="false"
             material="shader: flat; opacity: 1"
           ></a-plane>
+
+          <a-text
+  id="chapter-1-keyword-text"
+  position="0 -1.5 0" 
+  value=""
+  align="center"
+  color="#000000" 
+  width="6"
+  visible="false" 
+></a-text>
 
           <a-plane
             id="chapter-2-central-plane"
@@ -411,7 +421,7 @@
             visible="false"
             material="shader: flat; opacity: 1"
           ></a-plane>
-          
+
           <a-plane
             id="final-chapter-central-plane"
             position="0 1 0"
@@ -637,7 +647,7 @@
       </a-entity>
 
       <!-- Camera and Controls -->
-      <a-entity id="camera-rig" movement-controls position="0 1.6 5">
+      <!-- <a-entity id="camera-rig" movement-controls position="0 1.6 5">
         <a-camera
           look-controls="pointerLockEnabled: true"
           wasd-controls="acceleration: 20"
@@ -653,8 +663,31 @@
           >
           </a-cursor>
         </a-camera>
-      </a-entity>
+      </a-entity> -->
 
+      <a-entity 
+      id="camera-rig" 
+      position="0 1.6 3"
+      animation="property: position; to: 0 58 3; dur: 120000; loop: true; dir: alternate; easing: easeInOutQuad"
+    >
+      <a-camera 
+        orbit-controls="autoRotate: true; autoRotateSpeed: 0.5; enableDamping: true; dampingFactor: 0.05; target: 0 1.6 0"
+        look-controls="enabled: false" 
+        wasd-controls="enabled: false" 
+        cursor="rayOrigin: mouse; fuse: false"
+          raycaster="objects: .clickable, .chapter-clickable"
+      >
+        <a-cursor 
+          color="#ff6b6b"
+          animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
+          animation__fusing="property: scale; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
+            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+            material="color: #ff6b35; shader: flat"
+            position="0 0 -1"
+        ></a-cursor>
+      </a-camera>
+    </a-entity>
+      
       <!-- Lighting -->
       <a-light type="ambient" color="#cccccc" intensity="0.8"></a-light>
       <a-light

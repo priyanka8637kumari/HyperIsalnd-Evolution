@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
          if (centralPlane) {
              centralPlane.setAttribute('visible', 'true');
          }
-         
      });
  });
  
