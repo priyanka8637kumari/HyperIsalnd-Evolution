@@ -66,6 +66,7 @@
         <img id="moneymate-img" src="assets/Moneymate.png" />
         <img id="litorina-img" src="assets/litorina.jpg" />
         <img id="webXR-img" src="assets/webXR.png" />
+        <img id="HIlogo" src="assets/HIlogo.png" />
 
         <!-- Mixins -->
         <a-mixin
@@ -270,6 +271,7 @@
             material="color: #ff6b35; emissive: #ff6b35; emissiveIntensity: 0.3"
             class="clickable"
             cursor-listener
+            
           >
             <a-animation
               attribute="material.emissiveIntensity"
@@ -282,7 +284,7 @@
           </a-box>
 
           <!-- Door sign -->
-          <a-text
+          <!-- <a-text
             position="0 4.5 0.25"
             value="HYPER ISLAND"
             color="#00ffff"
@@ -290,9 +292,17 @@
             width="15"
             align="center"
           >
-          </a-text>
+          </a-text> -->
 
-          <a-text
+          <a-image
+            src="#HIlogo"
+            position="-0.15 3.2 0.5"
+            rotation="0 0 0"
+            width="5.6"
+            height="3"
+            material="shader: flat"
+          ></a-image>
+          <!-- <a-text
             position="0 2.5 0.25"
             value="SEIZE YOUR\nPOTENTIAL"
             color="#00ffff"
@@ -300,27 +310,27 @@
             width="10"
             align="center"
           >
-          </a-text>
+          </a-text> -->
 
           <a-text
-            position="0 1 0.25"
+            position="0 0.5 0.25"
+            value="Click Me\n to begin\n the adventure"
+            color="#00ffff"
+            font="https://cdn.aframe.io/fonts/mozillavr.fnt"
+            width="12"
+            align="center"
+          >
+          </a-text>
+
+          <!-- <a-text
+            position="0 -1 0.25"
             value="LEARN\nFOR LIFE"
             color="#00ffff"
             font="https://cdn.aframe.io/fonts/mozillavr.fnt"
             width="12"
             align="center"
           >
-          </a-text>
-
-          <a-text
-            position="0 -1 0.25"
-            value="CHANGE\nTHE WORLD"
-            color="#00ffff"
-            font="https://cdn.aframe.io/fonts/mozillavr.fnt"
-            width="12"
-            align="center"
-          >
-          </a-text>
+          </a-text> -->
 
           <!-- Door glow -->
           <a-light
@@ -351,16 +361,6 @@
             material="shader: flat; opacity: 1"
           ></a-plane>
 
-          <a-text
-  id="chapter-1-keyword-text"
-  position="0 -1.5 0" 
-  value=""
-  align="center"
-  color="#000000" 
-  width="6"
-  visible="false" 
-></a-text>
-
           <a-plane
             id="chapter-2-central-plane"
             position="0 1 0"
@@ -372,14 +372,14 @@
           ></a-plane>
 
           <a-plane
-          id="chapter-3-central-plane"
-          position="0 1 0"
-          width="6"
-          height="4.5"
-          src="#recipe-img"
-          visible="false"
-          material="shader: flat; opacity: 1"
-        ></a-plane>
+            id="chapter-3-central-plane"
+            position="0 1 0"
+            width="6"
+            height="4.5"
+            src="#recipe-img"
+            visible="false"
+            material="shader: flat; opacity: 1"
+          ></a-plane>
 
           <a-plane
             id="chapter-4-central-plane"
@@ -389,7 +389,6 @@
             src="#healthcare-img"
             visible="false"
             material="shader: flat; opacity: 1"
-           
           ></a-plane>
 
           <a-plane
@@ -647,47 +646,26 @@
       </a-entity>
 
       <!-- Camera and Controls -->
-      <!-- <a-entity id="camera-rig" movement-controls position="0 1.6 5">
+
+      <a-entity id="camera-rig" position="0 1.6 5">
         <a-camera
-          look-controls="pointerLockEnabled: true"
-          wasd-controls="acceleration: 20"
+          orbit-controls="autoRotate: true; autoRotateSpeed: 0.5; enableDamping: true; dampingFactor: 0.05; target: 0 1.6 0"
+          look-controls="enabled: true"
+          wasd-controls="enabled: true"
           cursor="rayOrigin: mouse; fuse: false"
           raycaster="objects: .clickable, .chapter-clickable"
         >
           <a-cursor
+            color="#ff6b6b"
             animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
             animation__fusing="property: scale; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
             geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
             material="color: #ff6b35; shader: flat"
             position="0 0 -1"
-          >
-          </a-cursor>
+          ></a-cursor>
         </a-camera>
-      </a-entity> -->
+      </a-entity>
 
-      <a-entity 
-      id="camera-rig" 
-      position="0 1.6 3"
-      animation="property: position; to: 0 58 3; dur: 120000; loop: true; dir: alternate; easing: easeInOutQuad"
-    >
-      <a-camera 
-        orbit-controls="autoRotate: true; autoRotateSpeed: 0.5; enableDamping: true; dampingFactor: 0.05; target: 0 1.6 0"
-        look-controls="enabled: false" 
-        wasd-controls="enabled: false" 
-        cursor="rayOrigin: mouse; fuse: false"
-          raycaster="objects: .clickable, .chapter-clickable"
-      >
-        <a-cursor 
-          color="#ff6b6b"
-          animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
-          animation__fusing="property: scale; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
-            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-            material="color: #ff6b35; shader: flat"
-            position="0 0 -1"
-        ></a-cursor>
-      </a-camera>
-    </a-entity>
-      
       <!-- Lighting -->
       <a-light type="ambient" color="#cccccc" intensity="0.8"></a-light>
       <a-light
