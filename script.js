@@ -38,6 +38,21 @@ document.addEventListener('DOMContentLoaded', () => {
          }
      });
  });
+
+ const backButton = document.querySelector('#back-button');
+    const dreamyGirlScene = document.querySelector('#initial-scene');
+    const chapterScene = document.querySelector('#chapter-scene');
+
+    // Add click event listener to the Back button
+    backButton.addEventListener('click', () => {
+        console.log('🔙 Back button clicked, returning to Dreamy Girl scene...');
+        
+        // Hide Chapters Scene
+        chapterScene.setAttribute('visible', 'false');
+
+        // Show Dreamy Girl Scene
+        dreamyGirlScene.setAttribute('visible', 'true');
+    });
  
 });
 

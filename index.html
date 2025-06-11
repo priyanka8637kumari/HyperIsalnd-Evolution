@@ -46,7 +46,7 @@
         <!-- 3D Models -->
         <a-asset-item
           id="dreamy-girl"
-          src="assets/dreamy-girl.glb"
+          src="assets/scene.glb"
         ></a-asset-item>
 
         <a-asset-item id="island-model" src="assets/Island.glb"></a-asset-item>
@@ -130,7 +130,7 @@
           id="dreamy-girl"
           gltf-model="#dreamy-girl"
           position="0 -1.2 -2.5"
-          rotation="0 0 0"
+          rotation="0 -45 0"
           scale="4 4 4"
           animation-mixer
         >
@@ -695,9 +695,21 @@
         </a-entity>
       </a-entity>
 
+      <!-- Back Button -->
+  <a-plane
+  id="back-button"
+  position="20 15 -1"
+  width="3"
+  height="2"
+  material="color: #000000; opacity: 0.2";
+  text="value: Back; align: center; color: #ff6b35; width: 16"
+  class="clickable"
+></a-plane>
+</a-entity>
+
       <!-- Camera and Controls -->
 
-      <a-entity id="camera-rig" position="0 1.6 5">
+      <a-entity id="camera-rig" position="0 1.6 15">
         <a-camera
           orbit-controls="autoRotate: true; autoRotateSpeed: 0.5; enableDamping: true; dampingFactor: 0.05; target: 0 1.6 0"
           look-controls="enabled: true"
