@@ -262,11 +262,12 @@ function showChapterInfo(chapterNum) {
                 // Highlight selected chapter
                 box.setAttribute('material', 'color: #FFD700; emissive: #FFD700; emissiveIntensity: 0.5');
                 box.setAttribute('animation__glow', 'property: material.emissiveIntensity; to: 1; dur: 1000; dir: alternate; loop: true');
-            } else if (box) {
-                // Reset other chapters
-                box.setAttribute('material', 'color: #ff6b35');
-                box.removeAttribute('animation__glow');
-            }
+            } 
+            // else if (box) {
+            //     // Reset other chapters
+            //     box.setAttribute('material', 'color: #ff6b35');
+            //     box.removeAttribute('animation__glow');
+            // }
         });
     }
 }
