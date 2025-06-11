@@ -36,6 +36,16 @@ document.addEventListener('DOMContentLoaded', () => {
          if (centralPlane) {
              centralPlane.setAttribute('visible', 'true');
          }
+          // Special case for Final Chapter: Display Dreamy Girl model
+          if (chapterNum === 'final') {
+            const dreamyGirlCentral = document.querySelector('#happy-girl-central');
+            dreamyGirlCentral.setAttribute('visible', 'true');
+            console.log('🌟 Displaying Happy Girl model on Central Island!');
+        } else {
+            // Hide Dreamy Girl model for other chapters
+            const dreamyGirlCentral = document.querySelector('#happy-girl-central');
+            dreamyGirlCentral.setAttribute('visible', 'false');
+        }
      });
  });
 

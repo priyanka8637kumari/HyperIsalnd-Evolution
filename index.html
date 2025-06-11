@@ -46,8 +46,13 @@
         <!-- 3D Models -->
         <a-asset-item
           id="dreamy-girl"
-          src="assets/scene.glb"
+          src="assets/dreamy-girl.glb"
         ></a-asset-item>
+
+        <a-asset-item
+        id="happy-girl"
+        src="assets/happy-girl.glb"
+      ></a-asset-item>
 
         <a-asset-item id="island-model" src="assets/Island.glb"></a-asset-item>
 
@@ -420,7 +425,7 @@
             material="shader: flat; opacity: 1"
           ></a-plane>
 
-          <a-plane
+          <!-- <a-plane
             id="final-chapter-central-plane"
             position="0 1 0"
             width="6"
@@ -428,7 +433,16 @@
             src="#portfolio-img"
             visible="false"
             material="shader: flat; opacity: 1"
-          ></a-plane>
+          ></a-plane> -->
+
+          <a-entity
+  id="happy-girl-central"
+  gltf-model="#happy-girl"
+  position="0 -1.5 0"
+  rotation="0 -90 0"
+  scale="9 9 9"
+  visible="false"
+></a-entity>
 
           <!-- Central island -->
           <a-cylinder
@@ -706,6 +720,7 @@
   class="clickable"
 ></a-plane>
 </a-entity>
+
 
       <!-- Camera and Controls -->
 
