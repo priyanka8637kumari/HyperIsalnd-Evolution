@@ -42,7 +42,7 @@
           src="assets/transition.mp3"
           preload="auto"
         ></audio>
-        
+
         <!-- 3D Models -->
         <a-asset-item
           id="dreamy-girl"
@@ -50,9 +50,9 @@
         ></a-asset-item>
 
         <a-asset-item
-        id="happy-girl"
-        src="assets/happy-girl.glb"
-      ></a-asset-item>
+          id="happy-girl"
+          src="assets/happy-girl.glb"
+        ></a-asset-item>
 
         <a-asset-item id="island-model" src="assets/Island.glb"></a-asset-item>
 
@@ -287,17 +287,6 @@
             </a-animation>
           </a-box>
 
-          <!-- Door sign -->
-          <!-- <a-text
-            position="0 4.5 0.25"
-            value="HYPER ISLAND"
-            color="#00ffff"
-            font="https://cdn.aframe.io/fonts/mozillavr.fnt"
-            width="15"
-            align="center"
-          >
-          </a-text> -->
-
           <a-image
             src="#HIlogo"
             position="-0.15 3.2 0.5"
@@ -306,15 +295,6 @@
             height="3"
             material="shader: flat"
           ></a-image>
-          <!-- <a-text
-            position="0 2.5 0.25"
-            value="SEIZE YOUR\nPOTENTIAL"
-            color="#00ffff"
-            font="https://cdn.aframe.io/fonts/mozillavr.fnt"
-            width="10"
-            align="center"
-          >
-          </a-text> -->
 
           <a-text
             position="0 0.5 0.25"
@@ -325,16 +305,6 @@
             align="center"
           >
           </a-text>
-
-          <!-- <a-text
-            position="0 -1 0.25"
-            value="LEARN\nFOR LIFE"
-            color="#00ffff"
-            font="https://cdn.aframe.io/fonts/mozillavr.fnt"
-            width="12"
-            align="center"
-          >
-          </a-text> -->
 
           <!-- Door glow -->
           <a-light
@@ -425,24 +395,14 @@
             material="shader: flat; opacity: 1"
           ></a-plane>
 
-          <!-- <a-plane
-            id="final-chapter-central-plane"
-            position="0 1 0"
-            width="6"
-            height="4.5"
-            src="#portfolio-img"
-            visible="false"
-            material="shader: flat; opacity: 1"
-          ></a-plane> -->
-
           <a-entity
-  id="happy-girl-central"
-  gltf-model="#happy-girl"
-  position="0 -1.5 0"
-  rotation="0 -90 0"
-  scale="9 9 9"
-  visible="false"
-></a-entity>
+            id="happy-girl-central"
+            gltf-model="#happy-girl"
+            position="0 -1.5 0"
+            rotation="0 -90 0"
+            scale="9 9 9"
+            visible="false"
+          ></a-entity>
 
           <!-- Central island -->
           <a-cylinder
@@ -508,7 +468,6 @@
               material="color: #FFFFFF; opacity: 0.8"
               class="chapter-clickable"
               data-chapter="2"
-              
             ></a-sphere>
           </a-entity>
 
@@ -538,7 +497,6 @@
               material="color: #FFFFFF; opacity: 0.8"
               class="chapter-clickable"
               data-chapter="3"
-              
             ></a-sphere>
           </a-entity>
 
@@ -707,20 +665,19 @@
             material="color: #ffffff; opacity: 0.8"
           ></a-sphere>
         </a-entity>
+
+        <!-- Back Button -->
+        <a-plane
+          id="back-button"
+          position="20 15 -1"
+          width="3"
+          height="2"
+          material="color: #000000; opacity: 0.2"
+          ;
+          text="value: Back; align: center; color: #ff6b35; width: 16"
+          class="clickable"
+        ></a-plane>
       </a-entity>
-
-      <!-- Back Button -->
-  <a-plane
-  id="back-button"
-  position="20 15 -1"
-  width="3"
-  height="2"
-  material="color: #000000; opacity: 0.2";
-  text="value: Back; align: center; color: #ff6b35; width: 16"
-  class="clickable"
-></a-plane>
-</a-entity>
-
 
       <!-- Camera and Controls -->
 
