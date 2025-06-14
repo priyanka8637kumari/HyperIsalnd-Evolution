@@ -13,15 +13,6 @@ This project reflects personal growth, technical milestones, and design thinking
 
 ---
 
-## 🌐 Live Project
-
-You can experience the project in-browser or via VR-compatible devices using WebXR:
-
-🔗 [Live Demo Link](#)  
-
-
----
-
 ## 🚀 Features
 
 - **Scene-based storytelling**: Chapters laid out in a semi-circular formation.
@@ -36,7 +27,7 @@ You can experience the project in-browser or via VR-compatible devices using Web
 
 - **A-Frame** (WebXR Framework)
 - **JavaScript** + **HTML** + **CSS**
-- **Netlify / Glitch** for deployment
+- **Netlify** for deployment
 - **3DAI Studio** + Blender for 3D assets
 
 ---
@@ -57,6 +48,6 @@ MIT License – Free to use, remix, and learn from.
 
 ## 🔗 Live Demo
 
-You can experience the project live here: [Time Traveler's Archive](https://hievolution.netlify.app)
+You can experience the project live here: [Hyper Island Evolution](https://hievolution.netlify.app)
 
 [![Live Site](https://img.shields.io/badge/View-Live-green)](https://hievolution.netlify.app)
