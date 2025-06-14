@@ -19,6 +19,7 @@ You can experience the project in-browser or via VR-compatible devices using Web
 
 🔗 [Live Demo Link](#)  
 
+
 ---
 
 ## 🚀 Features
@@ -35,10 +36,11 @@ You can experience the project in-browser or via VR-compatible devices using Web
 
 - **A-Frame** (WebXR Framework)
 - **JavaScript** + **HTML** + **CSS**
-- **Netlify** for deployment
+- **Netlify / Glitch** for deployment
 - **3DAI Studio** + Blender for 3D assets
 
 ---
+
 
 ## 💡 How to Run
 
@@ -55,6 +57,6 @@ MIT License – Free to use, remix, and learn from.
 
 ## 🔗 Live Demo
 
-You can experience the project live here: [Hyper Island Evolution](https://hievolution.netlify.app)
+You can experience the project live here: [Time Traveler's Archive](https://hievolution.netlify.app)
 
 [![Live Site](https://img.shields.io/badge/View-Live-green)](https://hievolution.netlify.app)
