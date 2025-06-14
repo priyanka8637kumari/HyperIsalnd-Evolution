@@ -17,8 +17,7 @@ This project reflects personal growth, technical milestones, and design thinking
 
 You can experience the project in-browser or via VR-compatible devices using WebXR:
 
-🔗 [Live Demo Link](#)  
-🔗 [GitHub Repository](#) 
+🔗 [Live Demo Link](#https://hievolution.netlify.app/)  
 
 ---
 
